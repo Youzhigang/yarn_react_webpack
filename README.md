@@ -374,3 +374,6 @@ file-loader处理mp4/ogg/svg等,url-loader处理图片字体等,同样配置load
 ```
 
 添加loader后报错 can't find module 请重启服务器再次尝试
+
+### tips:
+>use npm   user `npm install package` instead of `yarn add package`
