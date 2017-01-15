@@ -268,21 +268,13 @@ export default App;
 
 
 ```
-
 //main.js
-
 import React from 'react';
-
 import ReactDom from 'react-dom';
-
 import App from './components/app.js';
 
-
-
 ReactDom.render(
-
     <App />,
-
     document.getElementById("app")
 
 );
@@ -306,12 +298,8 @@ webpack: bundle is now VALID.
 在devServer前面加入pluigins
 
 ```
-
-
 plugins: [
-
         new webpack.HotModuleReplacementPlugin()//热模块替换插件
-
     ],
 
 ```
@@ -325,9 +313,7 @@ plugins: [
 #### 额外
 
 当然以上这些只是基本的配置,比如现在css就没法识别,识别css需要loader,
-
 在module里面加上css-loader,style-loader
-
 >first:
 
 ```
@@ -344,17 +330,12 @@ yarn add css-loader style-loader
 >then eidt then webpack.config.js
 
 ```
+{
+   test: /\.css$/,
+   exclude:/node_modules/,
+   loader: 'style-loader!css-loader'
 
-
-    ﻿    ﻿{
-
-                test: /\.css$/,
-
-                exclude:/node_modules/,
-
-                loader: 'style-loader!css-loader'
-
-            },
+  },
 
 ```
 
@@ -363,11 +344,8 @@ yarn add css-loader style-loader
 在app.js同级目录下建立app.css(显示用,实际过程中按照项目要求放置css目录)
 
 ```
-
-﻿#test{
-
-    ﻿color:red;
-
+#test{
+    color:red;
     font-size:50px;
 
 }
@@ -379,7 +357,6 @@ yarn add css-loader style-loader
 ```
 
 yarn add --dev file-loader url-loader
-
 ```
 
 file-loader处理mp4/ogg/svg等,url-loader处理图片字体等,同样配置loader
@@ -387,19 +364,13 @@ file-loader处理mp4/ogg/svg等,url-loader处理图片字体等,同样配置load
 ```
 
 {
+    test: /\.(png|jpg|gif|woff|woff2)$/,
+    loader: 'url-loader?limit=8192'
+ }, {
+     test: /\.(mp4|ogg|svg)$/,
+     loader: 'file-loader'
+     }
 
-            test: /\.(png|jpg|gif|woff|woff2)$/,
-
-            loader: 'url-loader?limit=8192'
-
-        }, {
-
-            test: /\.(mp4|ogg|svg)$/,
-
-            loader: 'file-loader'
-
-        }
-
-﻿```
+```
 
 添加loader后报错 can't find module 请重启服务器再次尝试
