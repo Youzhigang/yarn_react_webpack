@@ -293,8 +293,6 @@ ReactDom.render(
 
 webpack: bundle is now VALID.
 
-```
-
 此时打开127.0.0.1:8111 会显示测试用例的内容
 
 
