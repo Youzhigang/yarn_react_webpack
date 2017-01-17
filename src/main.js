@@ -8,9 +8,10 @@ ReactDom.render(
     <div>
         <Header />
         <LeftBar />
-        <br /><br /><br />
-        <App />
-                
+        <br /><br /> <br />
+        <div className="main">
+            <App />
+        </div>
     </div>,
     document.getElementById("app")
 );

@@ -1,27 +1,40 @@
+
+
+
+
 .test
     color:blue
-    font-size:10px
-
+    // font-size:10px
+    position: relative;
+    left: 35%;
+    width: 40%;
+    background: #aaa;
+    font-size: 20px;
+    opacity: 0.5;
 
 .left
-    background-color: #fff
+    background-color: rgba(170,170,170,0.5)
     font-size: 0.9rem
     position: fixed
-    left:0
-    top:50px
+    left:15%
+    top:60px
     bottom:0
     width: 20%
     
 
 
 .header {
-    background-color: #41B883;
+    // background-color: #41B883;
+    background-color: #aaa;
+    opacity: 0.9
+    color:blue
     position: fixed;
     z-index: 999;
     height: 50px;
     top: 0;
     left: 0;
     right: 0;
+    opacity: 0.8
 }
 .header .inner {
      max-width: 800px; 
@@ -30,7 +43,7 @@
      padding: 15px 5px; 
 }
 .header a {
-    color: hsla(0,0%,100%,.8);
+    text-decoration: none 
     line-height: 24px;
     transition: color .15s ease;
     display: inline-block;
@@ -41,7 +54,7 @@
 }
  /*顶部导航条右边部分 */   
 .header .github {
-    color: #fff;
+    
     font-size: .9em;
     margin: 0;
     float: right;
