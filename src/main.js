@@ -7,7 +7,7 @@ import LeftBar from './components/partitial/siderbar';
 ReactDom.render(
     <div>
         <Header />
-        <LeftBar />
+        
         <br /><br /> <br />
         <div className="main">
             <App />
