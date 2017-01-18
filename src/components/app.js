@@ -9,6 +9,11 @@ require('isomorphic-fetch');
 
 import Title from './partitial/titlelist.js';
 import LeftBar from './partitial/siderbar.js';
+import { Router, Route, hashHistory } from 'react-router';
+import RouterConfig from './router/routercfg.js';
+import Content from './partitial/content.js';
+import Titlelist from './partitial/titlelist';
+
 
 class App extends Component {
     constructor(props) {
@@ -37,8 +42,14 @@ class App extends Component {
         return (
             <div className="test">
                 <img src={yeoman}/>
-                <LeftBar list={this.state.data} />
-                <Title titlelist={this.state.data} />
+                <LeftBar list={this.state.data}/>
+
+                <Router history={hashHistory}>
+
+                    <Route path="/" component={() => <Titlelist titlelist={this.state.data}/>}/>
+                    <Route path="/:id" component={Content}/>
+
+                </Router>
             </div>
         );
     }

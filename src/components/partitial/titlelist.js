@@ -1,4 +1,6 @@
 import React, {Component, PropTypes} from 'react';
+import {Link} from 'react-router';
+
 
 class TitleList extends Component {
 
@@ -18,7 +20,7 @@ class TitleList extends Component {
         return (
             <div>
                 <ul>
-                    {this.props.titlelist.map((item,index) => <li key={index}>{item.title}</li>)}
+                    {this.props.titlelist.map((item,index) => <li key={index}><Link to={item.id}>{item.title}</Link></li>)}
                 </ul>
             </div>
         );
