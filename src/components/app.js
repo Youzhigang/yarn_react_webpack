@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 // import {originalName as alias } from 'module'; import appcss from
 // './app.css'; require("./app.css")
-require("./app.styl")
+// require("./app.styl")
 import yeoman from './yeoman.png';
 import myImg from '../images/1.jpg';
 require('es6-promise').polyfill();
@@ -34,7 +34,7 @@ class App extends Component {
                 throw new Error("Bad response from server");
             }
             return response.json();
-        }).then((data) => this.setState({data: data.results})).catch(error => console.log(error));
+        }).then((data) => this.setState({data: data.results}));
 
     };
 
@@ -47,7 +47,7 @@ class App extends Component {
                 <Router history={hashHistory}>
 
                     <Route path="/" component={() => <Titlelist titlelist={this.state.data}/>}/>
-                    <Route path="/:id" component={Content}/>
+                    <Route path="/article/:id"  component={ Content }/>
 
                 </Router>
             </div>

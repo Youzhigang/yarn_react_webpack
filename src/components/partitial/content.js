@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
-import LeftBar from './siderbar.js';
-
+import marked from 'marked';
+var hljs = require('highlight.js');
+import '../../styles/monokai.css';
 
 class MainContent extends Component {
 
@@ -8,10 +9,22 @@ class MainContent extends Component {
         super(props);
         this.state={
             content:{},
-        }
+        };
+        marked.setOptions({
+            gfm: true,
+            tables: true,
+            breaks: false,
+            pedantic: false,
+            sanitize: true,
+            smartLists: true,
+            smartypants: false,
+            highlight: function (code) {
+                return hljs.highlightAuto(code).value;
+            }
+        });
     }
 
-    componentDidMount() {
+    componentWillMount() {
         window.fetch("http://localhost:8000/articles/" + this.props.params.id)
             .then(res => res.json())
             .then((json) => {
@@ -27,15 +40,17 @@ class MainContent extends Component {
             });
     }
     
+    
 
     render () {
         return (
-            <div>
+            <div>{this.props.params.id}---1---
                 content<br />
                 {this.state.content.category}<br />
                 {this.state.content.title}<br />
                 {this.state.content.post_time}<br />
-                {this.state.content.content}<br />
+                <div dangerouslySetInnerHTML={{__html:this.state.content.content?marked(this.state.content.content):marked("##loading")}} />
+               
             </div>
         )
     }

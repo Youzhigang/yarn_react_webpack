@@ -20,7 +20,7 @@ class TitleList extends Component {
         return (
             <div>
                 <ul>
-                    {this.props.titlelist.map((item,index) => <li key={index}><Link to={item.id}>{item.title}</Link></li>)}
+                    {this.props.titlelist.map((item,index) => <li key={index}><Link to={`/article/${item.id}`}>{item.title}</Link></li>)}
                 </ul>
             </div>
         );
