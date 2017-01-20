@@ -45,10 +45,8 @@ class App extends Component {
                 <LeftBar list={this.state.data}/>
 
                 <Router history={hashHistory}>
-
                     <Route path="/" component={() => <Titlelist titlelist={this.state.data}/>}/>
                     <Route path="/article/:id"  component={ Content }/>
-
                 </Router>
             </div>
         );

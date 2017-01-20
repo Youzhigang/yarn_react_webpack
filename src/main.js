@@ -10,11 +10,8 @@ import Test from './components/router/test';
 ReactDom.render(
     <div>
         <Header />
-        
         <br /><br /> <br />
         <App />
-           
-        
     </div>,
     document.getElementById("app")
 );

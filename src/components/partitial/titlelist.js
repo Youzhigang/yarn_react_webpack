@@ -14,8 +14,6 @@ class TitleList extends Component {
     //     this.setState({titlelist: nextProps});
     // }
 
-
-
     render() {
         return (
             <div>

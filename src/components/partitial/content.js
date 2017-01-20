@@ -45,7 +45,7 @@ class MainContent extends Component {
 
     render () {
         return (
-            <div>{this.props.params.id}---1---
+            <div className="content">{this.props.params.id}---1---
                 content<br />
                 {this.state.content.category}<br />
                 {this.state.content.title}<br />
