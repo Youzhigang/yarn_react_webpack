@@ -5,6 +5,7 @@ import Header from './components/partitial/header';
 import LeftBar from './components/partitial/siderbar';
 
 import RouterConfig from './components/router/routercfg.js';
+import Test from './components/router/test';
 
 ReactDom.render(
     <div>
@@ -17,3 +18,10 @@ ReactDom.render(
     </div>,
     document.getElementById("app")
 );
+
+// ReactDom.render(
+//     <div>
+//     <Test /></div>
+//     ,
+//     document.getElementById("app")
+// )
