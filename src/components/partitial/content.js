@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import marked from 'marked';
 var hljs = require('highlight.js');
 import '../../styles/monokai.css';
+var Fa = require('react-fontawesome');
 
 class MainContent extends Component {
 
@@ -49,8 +50,12 @@ class MainContent extends Component {
                 {this.state.content.category}<br />
                 {this.state.content.title}<br />
                 {this.state.content.post_time}<br />
-                <div dangerouslySetInnerHTML={{__html:this.state.content.content?marked(this.state.content.content):marked("##loading")}} />
                
+               {
+                   this.state.content.content? 
+                   <div dangerouslySetInnerHTML={{__html:marked(this.state.content.content)}} />:
+                   <Fa name='spinner' spin size='2x'/>
+                }
             </div>
         )
     }

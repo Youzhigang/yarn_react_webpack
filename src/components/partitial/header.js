@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-var FontAwesome = require('react-fontawesome');
+var Fa = require('react-fontawesome');
 
 class Header extends Component {
     render() {
@@ -11,7 +11,7 @@ class Header extends Component {
                     <a href="">INDEX </a>
                     <a href="">RSS </a>
                     <a href="">ABOUT </a>
-                    <a href="" className="github">Gitub  <FontAwesome name='github' size='2x'/> </a>
+                    <a href="" className="github">Gitub  <Fa name='github' size='2x'/> </a>
                     
                 </div>
             </div>
