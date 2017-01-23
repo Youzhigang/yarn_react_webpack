@@ -26,7 +26,12 @@ class MainContent extends Component {
     }
 
     componentWillMount() {
-        window.fetch("http://localhost:8000/articles/" + this.props.params.id)
+        window.fetch("http://localhost:8000/articles/" + this.props.params.id,{
+                method: "GET",
+                mode: "cors",
+                //部署需要改为no-cors
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            })
             .then(res => res.json())
             .then((json) => {
                 this.setState(

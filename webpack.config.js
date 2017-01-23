@@ -1,4 +1,4 @@
-// var webpack = require('webpack');
+var webpack = require('webpack');
 
 module.exports = {
 
@@ -47,9 +47,9 @@ module.exports = {
         ]
     },
 
-    // plugins: [
-    //     new webpack.HotModuleReplacementPlugin()//热模块替换插件
-    // ],
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()//热模块替换插件
+    ],
 
     devServer: {
         contentBase: "./build/", //为build文件夹下的内容配置服务器,默认是根目录

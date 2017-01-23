@@ -27,14 +27,16 @@ class App extends Component {
         window
         fetch('http://localhost:8000/articles/', {
                 method: "GET",
-                mode: "cros",
+                mode: "cors",  //部署需要改为no-cors
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-            }).then(function (response) {
-            if (response.status >= 400) {
-                throw new Error("Bad response from server");
-            }
-            return response.json();
-        }).then((data) => this.setState({data: data.results}));
+            }).then(
+                function (response) {
+                    if (response.status >= 400) {
+                        throw new Error("Bad response from server");
+                    }
+                    return response.json();
+                }
+        ).then((data) => this.setState({data: data.results}));
 
     };
 
