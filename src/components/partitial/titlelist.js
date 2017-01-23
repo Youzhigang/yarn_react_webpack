@@ -10,9 +10,7 @@ class TitleList extends Component {
         //     titlelist: []
         // };
     }
-    // componentWillReceiveProps(nextProps) {
-    //     this.setState({titlelist: nextProps});
-    // }
+   
 
     render() {
         return (

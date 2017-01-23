@@ -1,25 +1,28 @@
 .test
     // color:blue
     // font-size:10px
+    
     position: relative;
+    top:52px
     left: 35%;
     width: 50%;
     background: #aaa;
     font-size: 20px;
-    // opacity: 0.5;
+    opacity: 0.8;
 
 .content
     background: #272822
     color: #fff
     font-size: 1 rem
     overflow: hidden
-    opacity: 0.9
-  
+    opacity: 1
+    
     code
-        font-size: 1.1 rem
-        word-wrap:break-word //自动换行
-        word-break:break-all
-
+        font-size: 1 rem
+        word-break: break-all;// 只对英文起作用，以字母作为换行依据。
+        word-wrap: break-word; //只对英文起作用，以单词作为换行依据。
+        white-space: pre-wrap;// 只对中文起作用，强制换行。
+       
 .left
     color: black
     font-size: 0.8 rem
@@ -31,8 +34,8 @@
     background-color: rgba(170,170,170,0.5)
     font-size: 0.9rem
     position: fixed
-    left:15%
     top:60px
+    left:15%
     bottom:0
     width: 20%
     
