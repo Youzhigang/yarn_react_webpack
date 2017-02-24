@@ -16,7 +16,7 @@ yarn init 生成package.json
 ├──src
 
 ├─├──main.js
-
+//参数位置处理
 ├─├──components
 
 ├─├──├─app.js
